@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5ad881ee2d2388d91296c4f816df41f8",
+    "content-hash": "c54fe150fb7dd8ef3b37357ea80e5f53",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -2160,6 +2160,50 @@
                 "source": "https://github.com/php-fig/log/tree/3.0.0"
             },
             "time": "2021-07-14T16:46:02+00:00"
+        },
+        {
+            "name": "salarmehr/cosmopolitan",
+            "version": "1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/salarmehr/cosmopolitan.git",
+                "reference": "833edb94219885422c4aa5a4e13e134bd386ce2a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/salarmehr/cosmopolitan/zipball/833edb94219885422c4aa5a4e13e134bd386ce2a",
+                "reference": "833edb94219885422c4aa5a4e13e134bd386ce2a",
+                "shasum": ""
+            },
+            "require": {
+                "ext-intl": "*",
+                "php": ">=7.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8"
+            },
+            "type": "internationalisation",
+            "autoload": {
+                "psr-4": {
+                    "Salarmehr\\Cosmopolitan\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Reza Salarmehr",
+                    "email": "salarmehr@gmail.com"
+                }
+            ],
+            "description": "Super efficient application localisation",
+            "support": {
+                "issues": "https://github.com/salarmehr/cosmopolitan/issues",
+                "source": "https://github.com/salarmehr/cosmopolitan/tree/1.1"
+            },
+            "time": "2021-07-25T16:38:55+00:00"
         },
         {
             "name": "sensio/framework-extra-bundle",
