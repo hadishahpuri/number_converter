@@ -1,3 +1,90 @@
+.wrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.wrapper > .col-12 {
+    flex: 1 1 100%;
+}
+
+.wrapper > .col-6 {
+    flex: 1 1 50%;
+}
+
+.wrapper > .col-4 {
+    flex: 1 1 33%;
+}
+
+.wrapper > .col-3 {
+    flex: 1 1 25%;
+}
+
+@media only screen and (max-width: 600px) {
+    .wrapper > .col-3,
+    .wrapper > .col-4,
+    .wrapper > .col-6,
+    .wrapper > .col-12 {
+        width: 100%;
+    }
+}
+
 body {
-    background-color: lightgray;
+    height: 80vh;
+    width: 100%;
+    background: lightgray linear-gradient(to right, #2c5364, #203a43, #0f2027);
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+label{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    transition: all 0.3s;
+    transform: translateY(0rem);
+}
+
+input, select {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    font-size: 1.2rem;
+    margin: 0 auto;
+    border-radius: 0.2rem;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    width: 90%;
+    display: block;
+    border-bottom: 0.3rem solid transparent;
+    transition: all 0.3s;
+    padding: 7px;
+}
+
+.button {
+    font-family: 'Roboto', sans-serif;
+    pointer-events: auto;
+    cursor: pointer;
+    background: #e7e7e7;
+    border: none;
+    padding: 1.5rem 3rem;
+    margin: 10px;
+    font-size: inherit;
+    position: relative;
+    display: inline-block;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+
+.button:hover {
+    background: #9238c5;
+    color: white;
+}
+
+.button::before,
+.button::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }

@@ -13,12 +13,14 @@
             <option v-for="item in languages" :key="item.key" :value="item.key">{{ item.name }}</option>
           </select>
         </div>
-        <div class="col-12">
-          <button>Convert</button>
+        <div class="col-12 center">
+          <button class="button">Convert</button>
         </div>
       </div>
     </form>
-    <p>{{ result }}</p>
+    <div class="col-12 center">
+      <p class="result">{{ result }}</p>
+    </div>
   </div>
 </template>
 
@@ -40,6 +42,7 @@ export default {
         {key: "ru", name: "russian"},
         {key: "de", name: "german"},
         {key: "zh", name: "chinese"},
+        {key: "br", name: "brazil"},
       ],
       result: ""
     };
@@ -67,25 +70,8 @@ export default {
   text-align: center;
 }
 
-.wrapper {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.wrapper > .col-12 {
-  flex: 1 1 100%;
-}
-
-.wrapper > .col-6 {
-  flex: 1 1 50%;
-}
-
-.wrapper > .col-4 {
-  flex: 1 1 33%;
-}
-
-.wrapper > .col-3 {
-  flex: 1 1 25%;
+.result {
+  font-family: 'Roboto', sans-serif;
+  font-size: 25px;
 }
 </style>
