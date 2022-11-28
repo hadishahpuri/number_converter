@@ -23,7 +23,7 @@ class NumberConverterController extends AbstractController
         ]);
     }
 
-    #[Route('/number_converter', methods: ['POST'])]
+    #[Route('/api/number_converter', methods: ['POST'])]
     public function convert(NumberConverterRequest $request): Response
     {
         return new JsonResponse(['spellout' => Cosmo::create($request->language)->spellout(intval($request->number))]);
