@@ -1,11 +1,17 @@
 <template>
   <div>
-    <h2 class="center">My Application</h2>
-    <div v-text="message"></div>
-    {{ message }}
-    <ul>
-      <li :key="word.id" v-for="word in words">{{ word }}</li>
-    </ul>
+    <h2 class="center">Number Converter</h2>
+    <form method="post" onsubmit="convertNumber">
+      <div>
+        <label for="number">Number to convert</label>
+        <input type="number" name="number" id="number">
+      </div>
+      <div>
+        <label for="language">language</label>
+        <input type="text" name="language" id="language">
+      </div>
+      <button>Convert</button>
+    </form>
   </div>
 </template>
 
@@ -13,16 +19,17 @@
 export default {
   data() {
     return {
-      message: "A list of words",
-      words: []
+
     };
   },
   mounted() {
 
-    let el = document.querySelector("div[data-words]");
-    let mywords = el.dataset.words.split(",");
+  },
 
-    this.words.push.apply(this.words, mywords);
+  methods: {
+    convertNumber: function (e) {
+      console.log("convert", e.target.number, e.target.language);
+    }
   }
 };
 </script>
