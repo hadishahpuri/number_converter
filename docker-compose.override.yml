@@ -9,6 +9,8 @@ services:
       - ./../number_converter:/var/www/number_converter
     tty: true
     ports:
-      - "8000:8000"
+      - "7000:7000"
     expose:
-      - "8000"
+      - "7000"
+    command:
+      - symfony server:start --port=7000
