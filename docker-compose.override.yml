@@ -5,6 +5,8 @@ services:
     build:
       context: ./
       dockerfile: Dockerfile
+    volumes:
+      - ./../number_converter:/var/www/number_converter
     tty: true
     ports:
       - "8000:8000"

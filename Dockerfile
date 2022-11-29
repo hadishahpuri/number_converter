@@ -5,7 +5,7 @@ RUN apt-get update && apt-get install -y curl && curl -fsSL https://deb.nodesour
 
 RUN apt install -y php-fpm php-common php-cgi php-mbstring php-curl php-xml php-xmlrpc php-pear nano zip unzip php-zip php-bcmath php-json
 
-RUN curl -sS https://get.symfony.com/cli/installer | bash && export PATH="$HOME/.symfony5/bin:$PATH"
+RUN curl -sS https://get.symfony.com/cli/installer | bash && mv /root/.symfony5/bin/symfony /usr/local/bin/symfony
 
 #install composer
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" && \
