@@ -12,5 +12,7 @@
 ``1- composer update``<br>
 ``2- npm install``<br>
 ``3- npm run dev``<br>
-``4- symfony serve or symfony server:start --port=<port>``<br>
+``4- docker compose up --build -d``<br>
+``5- docker exec -it number_converter-app-1 bash``<br>
+``6- symfony serve or symfony server:start --port=<port>``<br>
 
