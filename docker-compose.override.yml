@@ -12,5 +12,3 @@ services:
       - "7000:7000"
     expose:
       - "7000"
-    command:
-      - symfony server:start --port=7000
