@@ -14,5 +14,6 @@
 ``3- npm run dev``<br>
 ``4- docker compose up --build -d``<br>
 ``5- docker exec -it number_converter-app-1 bash``<br>
-``6- symfony serve or symfony server:start --port=<port>``<br>
+``6- symfony server:start --port=7000``<br>
+``6- check http://127.0.0.1:7000/number_converter ``
 
