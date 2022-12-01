@@ -10,7 +10,7 @@
         <div class="col-6">
           <label for="language">language</label>
           <select name="language" id="language" v-model="language">
-            <option v-for="item in languages" :key="item.key" :value="item.key">{{ item.name }}</option>
+            <option v-for="item in languages" :key="item.key" :value="item.key">{{ upper(item.name) }}</option>
           </select>
         </div>
         <div class="col-12 center">
@@ -48,11 +48,15 @@ export default {
     };
   },
   mounted() {
-
+    this.languages.sort(function (a, b) {
+      var textA = a.name.toUpperCase();
+      var textB = b.name.toUpperCase();
+      return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+    });
   },
 
   methods: {
-    convertNumber: function (e) {
+    convertNumber: function () {
       let self = this;
       axios.post("/api/number_converter", {language: this.language, number: this.number},
           {headers: {'Content-Type': 'application/json'}}).then(res => {
@@ -60,8 +64,24 @@ export default {
       }).catch(err => {
         console.log(err);
       })
+    },
+    upper: function capitalizeFirstLetter(string) {
+      return string.charAt(0).toUpperCase() + string.slice(1);
     }
-  }
+  },
+  watch: {
+    // whenever question changes, this function will run
+    language: {
+      handler: function (val) {
+        this.convertNumber();
+      }
+    },
+    number: {
+      handler: function (val) {
+        this.convertNumber();
+      }
+    },
+  },
 };
 </script>
 
